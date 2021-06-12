@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Krub);
+
+body {
+  margin: 0;
+  font-family: Krub, sans-serif;
+}
+
+#page-topic {
+  padding: 0 0.5em;
+}
+
+#navbar {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: #f2f1f3;
+  overflow: auto;
+}
+
+#nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu li a {
+  /* Let's make it so that the user can click on the whole area for each link in the navbar, rather than only being able to click on the text of the link: */
+  display: block;
+  
+  padding: 1em;
+  border-top: 1px solid #dfdce3;
+
+  text-decoration: none;
+  color: black;
+
+  /* We'll make the link color change on hover smoothly using transition: */
+  transition: all 0.2s;
+}
+
+#nav-menu li:last-child a {
+  border-bottom: 1px solid #595361;
+}
+
+/* To make the menu more intuitive, we'll darken the navbar items whenever the user mouses over them: */
+#nav-menu li a:hover {
+  background-color: #20A39E;
+}
+
+main {
+  padding-left: 300px;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    width: 150px;
+  }
+  
+  main {
+    padding-left: 150px;
+  }
+  
+  #page-topic {
+    font-size: 0.8em;
+    display: block;
+    padding: 0.5em;
+    margin: 0;
+  }  
+  
+  .nav-link {
+    font-size: 0.8em;
+  }
+
+  
+} /* END OF MEDIA QUERY */
+
+
+section {
+  padding: 1em 2em;
+}
+
+header {
+  color: #fc4a1a;
+  font-size: 1.2em;
+}
+
+h3 {
+    color: #fc4a1a
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #20A39E;
+
+  margin: 2em 0 0 2em;
+}
+
+p {
+  padding: 0 2em;
+  line-height: 1.5em;
+}
+
+section li {
+  margin: 0 2em;
+}
+
+pre {
+  margin: 0;
+}
+
+code {
+  margin: 0 3em;
+  padding: 1em 2em;
+  border: 1px solid #ddd;
+  border-left: 5px #4abdac solid;
+  border-radius: 5px;
+  background-color: #fbfbfc;
+  display: block;
+  box-shadow: 0.2em 0.2em 0.5em 0.1em #ccc;
+
+  line-height: 1.4em;
+  overflow: auto;
+}
+
+table {
+  margin: 2em;
+}
+
+th {
+  background-color: #92d7cd;
+}
+
+table,
+th,
+td,
+tr {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5em;
+  border: 1px solid #dfdce3;
+  border-collapse: collapse;
+}
+
+tr:hover {
+  background-color: #f2f1f3;
+}

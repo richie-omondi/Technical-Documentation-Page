@@ -13,13 +13,11 @@
             <ul id="nav-menu">
             <li><a class="nav-link" href="#Introduction">Introduction</a></li>
             <li><a class="nav-link" href="#Python_Comments">Python Comments</a></li>
-            <li><a class="nav-link" href="#How_to_Use_CSS_Transitions">How to Use CSS Transitions</a></li>
-            <li><a class="nav-link" href="#Change_Several_Property_Values">Change Several Property Values</a></li>
-            <li><a class="nav-link" href="#Specify_the_Speed_Curve_of_the_Transition">Specify the Speed Curve of the Transition</a></li>
-            <li><a class="nav-link" href="#Delay_the_Transition_Effect">Delay the Transition Effect</a></li>
-            <li><a class="nav-link" href="#Transition_with_Transformation">Transition with Transformation</a></li>
-            <li><a class="nav-link" href="#More_Transition_Examples">More Transition Examples</a></li>
-            <li><a class="nav-link" href="#CSS_Transition_Properties">CSS Transition Properties</a></li>
+            <li><a class="nav-link" href="#Python_Variables">Python Variables</a></li>
+            <li><a class="nav-link" href="#Python_Variable_Names">Python Variable Names</a></li>
+            <li><a class="nav-link" href="#Assign_Multiple_Values">Assign Multiple Values</a></li>
+            <li><a class="nav-link" href="#Python_Output_Variables">Python Output Variables</a></li>
+            <li><a class="nav-link" href="#Python_Global_Variables">Python Global Variables</a></li>
             <li><a class="nav-link" href="#Reference">Reference</a></li>
             <li><a class="nav-link" href="#Credits">Credits</a></li>
             </ul>
@@ -50,7 +48,7 @@
                     <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages</li>
                     <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick</li>
                 </ul>
-                <p>Let's get started</p>
+                <p>Let's get started!</p>
                 </article>
             </section>
         
@@ -58,194 +56,384 @@
             <header>
                 <h1>Python Comments</h1>
             </header>
+            <article>
             <p>Comments can be used to explain Python code</p>
             <p>Comments can be used to make the code more readable</p>
             <p>Comments can be used to prevent execution when testing code</p>
+            </article>
+            <article>
+            <h3>Creating a Comment</h3>
+            <p>Python will ignore comments starting with a #</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+                    #This is a comment
+                    print("Hello World!")
+                </code>
+            </pre>
+            <p>Comments can be placed at the end of a line and Python will ignore the rest of the line</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+                    print("Hello World!") #This is a comment
+                </code>
+            </pre>
+            <p>A comment does not have to be text that explains the code, it can also be used to prevent Python from executing code</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+                    #print (Hello World!)
+                    print(I love you Mary!)
+                </code>
+            </pre>
+            </article>
+            <article>
+                <h3>Multi-line comments</h3>
+                <p>Python does not really have a syntax for multi line comments.</p>
+                <p>To add a multiline comment you could insert a # for each line.</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        #This is a comment
+                        #written
+                        #in more than one line
+                        print("Hello World!")
+                    </code>
+                </pre>
+                <p>You can also use string literals.</p>
+                <p>Python will ignore any code written in between them</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        """
+                        This is a comment
+                        written
+                        in more than one line
 
-                
+                        """"
+                    </code>
+                </pre>
+            </article>
             </section>
         
-            <section class="main-section" id="How_to_Use_CSS_Transitions">
+            <section class="main-section" id="Python Variables">
             <header>
-                <h1>How to Use CSS Transitions</h1>
+                <h1>Python Variables</h1>
             </header>
-            <p>To create a transition effect, you must specify two things:</p>
-            <ul>
-                <li>the CSS property you want to add an effect to</li>
-                <li>the duration of the effect</li>
-            </ul>
-            <p>Note: If the duration part is not specified, the transition will have no effect, because the default value is 0.</p>
-            <p>The following example shows a 100px * 100px red &ltdiv&gt element. The &ltdiv&gt element has also specified a transition effect for the width property, with a duration of 2 seconds:</p>
-            <h2>Example:</h2>
-            <pre>
-                <code>
-        div {
-            width: 100px;
-            height: 100px;
-            background: red;
-            -webkit-transition: width 2s; /* Safari */
-            transition: width 2s;
-        }
-                </code>
-            </pre>
-            <p>The transition effect will start when the specified CSS property (width) changes value.</p>
-            <p>Now, let us specify a new value for the width property when a user mouses over the &ltdiv&gt element:</p>
-            <h2>Example</h2>
-        
-            <pre>
-                <code>
-        div:hover {
-            width: 300px;
-        }
-                </code>
-            </pre>
-            <p>Notice that when the cursor mouses out of the element, it will gradually change back to its original style.</p>
+                <h3>Variables</h3>
+                <p>Variables are used to store data values</p>
+                <article>
+                <h3>Creating Variables</h3>
+                <p>Python has no command for declaring a variable.</p>
+                <p>A variable is created the moment you first assign a value to it.</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x = 5
+                        y = "John"
+                        print(x)
+                        print(y)
+
+                        5
+                        John
+                    </code>
+                </pre>
+                <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x = 4 #This is a of type int
+                        x = "Sally" # This is of type str
+                        print(x)
+
+                        Sally
+                    </code>
+                </pre>
+                </article>
+                <article>
+                <h3>Casting</h3>
+                <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x = str(2) # x will be '2'
+                        y = int(3) # y will be 3
+                        z = float(3) # z will be 3.0
+                    </code>
+                </pre>
+                </article>
+                <article>
+                    <h3>Get the type</h3>
+                    <p>You can get the data type of a variable with the type() function.</p>
+                    <h2>Example:</h2>
+                    <pre>
+                        <code>
+                            x = 5
+                            y = "John"
+                            print(type(x))
+                            print(type(y))
+
+                            type int
+                            type str
+                        </code>
+                    </pre>
+                </article>
+                <article>
+                    <h3>Case-sensitive</h3>
+                    <p>Variable names are case-sensitive</p>
+                    <h2>Example:</h2>
+                    <pre>
+                        <code>
+                            a = 4
+                            A = "Sally"
+                            # A will not overwrite a 
+                        </code>
+                    </pre>
+                </article>
             </section>
         
-            <section class="main-section" id="Change_Several_Property_Values">
+            <section class="main-section" id="Python_Variable_Names">
             <header>
-                <h1>Change Several Property Values</h1>
+                <h1>Python Variable Names</h1>
             </header>
-            <p>The following example adds a transition effect for both the width and height property, with a duration of 2 seconds for the width and 4 seconds for the height:</p>
-            <h2>Example:</h2>
-        
-            <pre>
-                <code>
-        div {
-            -webkit-transition: width 2s, height 4s; /* Safari */
-            transition: width 2s, height 4s;
-        }
-                </code>
-            </pre>
+            <article>
+                <h3>Variable names</h3>
+                <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume)</p>
+                <p>Rules for variable names:</p>
+                <ul>
+                    <li>A variable name must start with a letter or the underscore character</li>
+                    <li>A variable name cannot start with a number</li>
+                    <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+                    <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+                </ul>
+                <h2>Example:</h2>
+                <p>Legal variable names:</p>
+                <pre>
+                    <code>
+                        myvar = "John"
+                        my_var = "John"
+                        _my_var = "John"
+                        myVar = "John"
+                        MYVAR = "John"
+                        myvar2 = "John"
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>Camel Case</h3>
+                <p>Camel case is the most popular form of declaring multi word variable names. These techniques are use because multi word variable names can be difficult to read</p>
+                <p>Each word except the first starts with a capital letter</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        myVeryFirstVariableName = "John"
+                    </code>
+                </pre>
+            </article>
             </section>
         
-            <section class="main-section" id="Specify_the_Speed_Curve_of_the_Transition">
+            <section class="main-section" id="Assign_Multiple_Values">
             <header>
-                <h1>Specify the Speed Curve of the Transition</h1>
+                <h1>Assign Multiple Values</h1>
             </header>
-            <p>The transition-timing-function property specifies the speed curve of the transition effect.</p>
-            <p>The transition-timing-function property can have the following values:</p>
-            <ul>
-                <li>ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
-                <li>linear - specifies a transition effect with the same speed from start to end</li>
-                <li>ease-in - specifies a transition effect with a slow start</li>
-                <li>ease-out - specifies a transition effect with a slow end</li>
-                <li>ease-in-out - specifies a transition effect with a slow start and end</li>
-                <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</li>
-            </ul>
-            <p>The following example shows the some of the different speed curves that can be used:</p>
-            <h2>Example:</h2>
-            <pre>
-                <code>
-        #div1 {transition-timing-function: linear;}
-        #div2 {transition-timing-function: ease;}
-        #div3 {transition-timing-function: ease-in;}
-        #div4 {transition-timing-function: ease-out;}
-        #div5 {transition-timing-function: ease-in-out;}
-                </code>
-            </pre>
+            <article>
+                <h3>Many Values to Multiple Variables</h3>
+                <p>Python allows you to assign values to multiple variables in one line.</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x, y, z = "Orange", "Banana", "Apple"
+                        print(x)
+                        print(y)
+                        print(z)
+
+                        Orange
+                        Banana
+                        Apple
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>One Value to Multiple Variables</h3>
+                <p>And you can assign the same value to multiple variables in one line</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x = y = z = "Orange"
+                        print(x)
+                        print(y)
+                        print(z)
+
+                        Orange
+                        Orange
+                        Orange
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>Unpack a Collection</h3>
+                <p>If you have a collection of values in a list, tuple etc. Python allows you extract the values into variables. This is called <em>unpacking.</em></p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        fruits = ["orange", "banana", "cherry"]
+                        x, y, z = fruits
+                        print(x)
+                        print(y)
+                        print(z)
+
+                        orange
+                        banana
+                        cherry
+                    </code>
+                </pre>
+            </article>
             </section>
         
-            <section class="main-section" id="Delay_the_Transition_Effect">
+            <section class="main-section" id="Python_Output_Variables">
             <header>
-                <h1>Delay the Transition Effect</h1>
+                <h1>Python Output Variables</h1>
             </header>
-            <p>The transition-delay property specifies a delay (in seconds) for the transition effect.</p>
-            <p>The following example has a 1 second delay before starting:</p>
-            <h2>Example:</h2>
-            <pre>
-                <code>
-        div {
-            -webkit-transition-delay: 1s; /* Safari */
-            transition-delay: 1s;
-        }
-                </code>
-            </pre>
+            <article>
+                <h3>Output Variables</h3>
+                <p>The Python print statement is often used to output variables.</p>
+                <p>To combine both text and a variable, Python uses the + character:</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x = "awesome"
+                        print("Python is + x")
+
+                        Python is awesome
+                    </code>
+                </pre>
+                <p>You can also use the + character to add a variable to another variable:</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x = "Python "
+                        y = "is awesome"
+                        z = x + y
+                        print(z)
+
+                        Python is awesome
+                    </code>
+                </pre>
+                <p>For numbers, the + character works as a mathematical operator</p>
+                <h2>Example</h2>
+                <pre>
+                    <code>
+                        x = 5
+                        y = 10
+                        print(x + y)
+
+                        15
+                    </code>
+                </pre>
+                <p><strong>Please Note.</strong>If you try to combine a string and a number, Python will give you an error:</p>
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        x = 5
+                        y = "John"
+
+                        print(x + y)
+
+                        TypeError: unsupported operand type(s) for +: 'int' and 'str'
+                    </code>
+                </pre>
+                <p>Let's turn it up a notch</p>
+            </article>
             </section>
         
-            <section class="main-section" id="Transition_with_Transformation">
+            <section class="main-section" id="Python_Global_Variables">
             <header>
-                <h1>Transition with Transformation</h1>
+                <h1>Python Global Variables</h1>
             </header>
-            <p>The following example also adds a transformation to the transition effect:</p>
-            <h2>Example:</h2>
-            <pre>
-                <code>
-        div {
-            -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
-            transition: width 2s, height 2s, transform 2s;
-        }
-                </code>
-            </pre>
+            <article>
+                <h3>Global Variables</h3>
+                <p>Variables that are created outside of a function (as in all of the examples above) are known as global variables.</p>
+                <p>Global variables can be used by everyone, both inside of functions and outside.</p>
+                <h2>Example:</h2>
+                <p>Create a variable outside of a function, and use it inside the function</p>
+                <pre>
+                    <code>
+                        x = "awesome"
+
+                        def myfunc():
+                        print("Python is " + x)
+
+                        myfunc()
+
+                        Python is awesome
+                    </code>
+                </pre>
+                <p>If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.</p>
+                <h2>Example:</h2>
+                <p>Create a variable inside a function, with the same name as the global variable</p>
+                <pre>
+                    <code>
+                        x = "awesome"
+
+                        def myfunc():
+                        x = "fantastic"
+                        print("Python is " + x)
+
+                        myfunc()
+
+                        print("Python is " + x)
+
+                        Python is fantastic
+                        Python is awesome
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>The global keyword</h3>
+                <p>Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function.</p>
+                <p>To create a global variable inside a function, you can use the global keyword.</p>
+                <h2>Example:</h2>
+                <p>If you use the global keyword, the variable belongs to the global scope:</p>
+                <pre>
+                    <code>
+                        def myfunc():
+                            global x
+                            x = "fantastic"
+
+                        myfunc()
+
+                        print("Python is " + x)
+
+                        Python is awesome
+                    </code>
+                </pre>
+                <p>Also, use the global keyword if you want to change a global variable inside a function.</p>
+                <h2>Example</h2>
+                <p>To change the value of a global variable inside a function, refer to the variable by using the global keyword:</p>
+                <pre>
+                    <code>
+                        x = "awesome"
+
+                        def myfunc():
+                            global x
+                            x = "fantastic"
+
+                        myfunc()
+
+                        print("Python is " + x)
+                    </code>
+                </pre>
+
+                <p>That's all for today. Next time we shall continue with Data types and other material as we continue to dive deeper into one of the most popular programming languages</p>
+            </article>
             </section>
         
-            <section class="main-section" id="More_Transition_Examples">
-            <header>
-                <h1>More Transition Examples</h1>
-            </header>
-            <p>The CSS transition properties can be specified one by one, like this:</p>
-        
-            <h2>Example:</h2>
-            <pre>
-                <code>
-        div {
-            -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
-            transition: width 2s, height 2s, transform 2s;
-        }
-                </code>
-            </pre>
-        
-            <p>or by using the shorthand property transition:</p>
-            <h2>Example:</h2>
-            <pre>
-                <code>
-        div {
-            transition: width 2s linear 1s;
-        }
-                </code>
-            </pre>
-            </section>
-        
-            <section class="main-section" id="CSS_Transition_Properties">
-            <header>
-                <h1>CSS Transition Properties</h1>
-            </header>
-            <p>The following table lists all the CSS transition properties:</p>
-        
-            <table id="#properties-table">
-                <tr>
-                <th>Property</th>
-                <th>Description</th>
-                </tr>
-                <tr>
-                <td>transition</td>
-                <td>A shorthand property for setting the four transition properties into a single property</td>
-                </tr>
-                <tr>
-                <td>transition-delay</td>
-                <td>Specifies a delay (in seconds) for the transition effect</td>
-                </tr>
-                <tr>
-                <td>transition-duration</td>
-                <td>Specifies how many seconds or milliseconds a transition effect takes to complete</td>
-                </tr>
-                <tr>
-                <td>transition-property</td>
-                <td>Specifies the name of the CSS property the transition effect is for</td>
-                </tr>
-                <tr>
-                <td>transition-timing-function</td>
-                <td>Specifies the speed curve of the transition effect</td>
-                </tr>
-            </table>
-        
-            </section>
-        
+           
             <section class="main-section" id="Reference">
             <header>
                 <h1>Reference</h1>
             </header>
-            <p>All the information on this project page has been taken from the <a href="https://www.w3schools.com/Css/css3_transitions.asp" target="_blank" alt="">W3 Schools page on CSS Transitions</a>.</p>
+            <p>Most of the the information on this project page has been taken from the <a href="https://www.w3schools.com/python/python_variables.asp" target="_blank" alt="">W3 Schools page on Python Variables</a>.</p>
             </section>
             
             
@@ -253,7 +441,7 @@
             <header>
                 <h1>Credits</h1>
             </header>
-            <p>Designed and coded by <a href="http:/www.joolian.com" target="_blank" alt="link to desigher's website">Julian NF</a> for the <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page" target="_blank" alt="">freeCodeCamp Technical Documentation Page</a> project.</p>
+            <p>Built by Richard Orido</a> for the <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page" target="_blank" alt="">freeCodeCamp Technical Documentation Page</a> project.</p>
             </section>
         
         </main>
