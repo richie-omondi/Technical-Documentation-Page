@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Technical Documentation Page</title>
+        <link href="technical-documentation.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>
+            <h1 id="page-topic" tabindex="0">Python Documentation</h1>
+            </header>
+            <div>
+            <ul id="nav-menu">
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Python_Comments">Python Comments</a></li>
+            <li><a class="nav-link" href="#How_to_Use_CSS_Transitions">How to Use CSS Transitions</a></li>
+            <li><a class="nav-link" href="#Change_Several_Property_Values">Change Several Property Values</a></li>
+            <li><a class="nav-link" href="#Specify_the_Speed_Curve_of_the_Transition">Specify the Speed Curve of the Transition</a></li>
+            <li><a class="nav-link" href="#Delay_the_Transition_Effect">Delay the Transition Effect</a></li>
+            <li><a class="nav-link" href="#Transition_with_Transformation">Transition with Transformation</a></li>
+            <li><a class="nav-link" href="#More_Transition_Examples">More Transition Examples</a></li>
+            <li><a class="nav-link" href="#CSS_Transition_Properties">CSS Transition Properties</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+            <li><a class="nav-link" href="#Credits">Credits</a></li>
+            </ul>
+            </div>
+        </nav>
+        
+        <main id="main-doc">
+        
+            <section class="main-section" id="Introduction">
+            <header>
+                <h1>Introduction</h1>
+            </header>
+            <article>
+            <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+            <p>It is used for:</p>
+            <ul>
+                <li>web development(server side)</li>
+                <li>software development</li>
+                <li>data analytics and data science</li>
+                <li>database administration</li>
+            </ul>
+            </article>
+            <article>
+                <h3>Why Python?</h3>
+                <ul>
+                    <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc)</li>
+                    <li>Python has a simple syntax similar to the English language</li>
+                    <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages</li>
+                    <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick</li>
+                </ul>
+                <p>Let's get started</p>
+                </article>
+            </section>
+        
+            <section class="main-section" id="Python_Comments">
+            <header>
+                <h1>Python Comments</h1>
+            </header>
+            <p>Comments can be used to explain Python code</p>
+            <p>Comments can be used to make the code more readable</p>
+            <p>Comments can be used to prevent execution when testing code</p>
+
+                
+            </section>
+        
+            <section class="main-section" id="How_to_Use_CSS_Transitions">
+            <header>
+                <h1>How to Use CSS Transitions</h1>
+            </header>
+            <p>To create a transition effect, you must specify two things:</p>
+            <ul>
+                <li>the CSS property you want to add an effect to</li>
+                <li>the duration of the effect</li>
+            </ul>
+            <p>Note: If the duration part is not specified, the transition will have no effect, because the default value is 0.</p>
+            <p>The following example shows a 100px * 100px red &ltdiv&gt element. The &ltdiv&gt element has also specified a transition effect for the width property, with a duration of 2 seconds:</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            -webkit-transition: width 2s; /* Safari */
+            transition: width 2s;
+        }
+                </code>
+            </pre>
+            <p>The transition effect will start when the specified CSS property (width) changes value.</p>
+            <p>Now, let us specify a new value for the width property when a user mouses over the &ltdiv&gt element:</p>
+            <h2>Example</h2>
+        
+            <pre>
+                <code>
+        div:hover {
+            width: 300px;
+        }
+                </code>
+            </pre>
+            <p>Notice that when the cursor mouses out of the element, it will gradually change back to its original style.</p>
+            </section>
+        
+            <section class="main-section" id="Change_Several_Property_Values">
+            <header>
+                <h1>Change Several Property Values</h1>
+            </header>
+            <p>The following example adds a transition effect for both the width and height property, with a duration of 2 seconds for the width and 4 seconds for the height:</p>
+            <h2>Example:</h2>
+        
+            <pre>
+                <code>
+        div {
+            -webkit-transition: width 2s, height 4s; /* Safari */
+            transition: width 2s, height 4s;
+        }
+                </code>
+            </pre>
+            </section>
+        
+            <section class="main-section" id="Specify_the_Speed_Curve_of_the_Transition">
+            <header>
+                <h1>Specify the Speed Curve of the Transition</h1>
+            </header>
+            <p>The transition-timing-function property specifies the speed curve of the transition effect.</p>
+            <p>The transition-timing-function property can have the following values:</p>
+            <ul>
+                <li>ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+                <li>linear - specifies a transition effect with the same speed from start to end</li>
+                <li>ease-in - specifies a transition effect with a slow start</li>
+                <li>ease-out - specifies a transition effect with a slow end</li>
+                <li>ease-in-out - specifies a transition effect with a slow start and end</li>
+                <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</li>
+            </ul>
+            <p>The following example shows the some of the different speed curves that can be used:</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+        #div1 {transition-timing-function: linear;}
+        #div2 {transition-timing-function: ease;}
+        #div3 {transition-timing-function: ease-in;}
+        #div4 {transition-timing-function: ease-out;}
+        #div5 {transition-timing-function: ease-in-out;}
+                </code>
+            </pre>
+            </section>
+        
+            <section class="main-section" id="Delay_the_Transition_Effect">
+            <header>
+                <h1>Delay the Transition Effect</h1>
+            </header>
+            <p>The transition-delay property specifies a delay (in seconds) for the transition effect.</p>
+            <p>The following example has a 1 second delay before starting:</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+        div {
+            -webkit-transition-delay: 1s; /* Safari */
+            transition-delay: 1s;
+        }
+                </code>
+            </pre>
+            </section>
+        
+            <section class="main-section" id="Transition_with_Transformation">
+            <header>
+                <h1>Transition with Transformation</h1>
+            </header>
+            <p>The following example also adds a transformation to the transition effect:</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+        div {
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+            transition: width 2s, height 2s, transform 2s;
+        }
+                </code>
+            </pre>
+            </section>
+        
+            <section class="main-section" id="More_Transition_Examples">
+            <header>
+                <h1>More Transition Examples</h1>
+            </header>
+            <p>The CSS transition properties can be specified one by one, like this:</p>
+        
+            <h2>Example:</h2>
+            <pre>
+                <code>
+        div {
+            -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+            transition: width 2s, height 2s, transform 2s;
+        }
+                </code>
+            </pre>
+        
+            <p>or by using the shorthand property transition:</p>
+            <h2>Example:</h2>
+            <pre>
+                <code>
+        div {
+            transition: width 2s linear 1s;
+        }
+                </code>
+            </pre>
+            </section>
+        
+            <section class="main-section" id="CSS_Transition_Properties">
+            <header>
+                <h1>CSS Transition Properties</h1>
+            </header>
+            <p>The following table lists all the CSS transition properties:</p>
+        
+            <table id="#properties-table">
+                <tr>
+                <th>Property</th>
+                <th>Description</th>
+                </tr>
+                <tr>
+                <td>transition</td>
+                <td>A shorthand property for setting the four transition properties into a single property</td>
+                </tr>
+                <tr>
+                <td>transition-delay</td>
+                <td>Specifies a delay (in seconds) for the transition effect</td>
+                </tr>
+                <tr>
+                <td>transition-duration</td>
+                <td>Specifies how many seconds or milliseconds a transition effect takes to complete</td>
+                </tr>
+                <tr>
+                <td>transition-property</td>
+                <td>Specifies the name of the CSS property the transition effect is for</td>
+                </tr>
+                <tr>
+                <td>transition-timing-function</td>
+                <td>Specifies the speed curve of the transition effect</td>
+                </tr>
+            </table>
+        
+            </section>
+        
+            <section class="main-section" id="Reference">
+            <header>
+                <h1>Reference</h1>
+            </header>
+            <p>All the information on this project page has been taken from the <a href="https://www.w3schools.com/Css/css3_transitions.asp" target="_blank" alt="">W3 Schools page on CSS Transitions</a>.</p>
+            </section>
+            
+            
+            <section class="main-section" id="Credits">
+            <header>
+                <h1>Credits</h1>
+            </header>
+            <p>Designed and coded by <a href="http:/www.joolian.com" target="_blank" alt="link to desigher's website">Julian NF</a> for the <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page" target="_blank" alt="">freeCodeCamp Technical Documentation Page</a> project.</p>
+            </section>
+        
+        </main>
+    </body>
+</html>
