@@ -23,16 +23,11 @@ body {
 }
 
 #nav-menu li a {
-  /* Let's make it so that the user can click on the whole area for each link in the navbar, rather than only being able to click on the text of the link: */
   display: block;
-  
   padding: 1em;
   border-top: 1px solid #dfdce3;
-
   text-decoration: none;
   color: black;
-
-  /* We'll make the link color change on hover smoothly using transition: */
   transition: all 0.2s;
 }
 
@@ -40,7 +35,6 @@ body {
   border-bottom: 1px solid #595361;
 }
 
-/* To make the menu more intuitive, we'll darken the navbar items whenever the user mouses over them: */
 #nav-menu li a:hover {
   background-color: #20A39E;
 }
@@ -70,7 +64,7 @@ main {
   }
 
   
-} /* END OF MEDIA QUERY */
+}
 
 
 section {
