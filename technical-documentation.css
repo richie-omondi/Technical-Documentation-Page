@@ -36,7 +36,7 @@ body {
 }
 
 #nav-menu li a:hover {
-  background-color: #20A39E;
+  background-color: #243E36;
 }
 
 main {
@@ -72,17 +72,17 @@ section {
 }
 
 header {
-  color: #fc4a1a;
+  color: #B7E000;
   font-size: 1.2em;
 }
 
 h3 {
-    color: #fc4a1a
+    color: #B7E000;
 }
 
 h2 {
   font-size: 1.2em;
-  color: #20A39E;
+  color: #243E36;
 
   margin: 2em 0 0 2em;
 }
@@ -114,25 +114,4 @@ code {
   overflow: auto;
 }
 
-table {
-  margin: 2em;
-}
 
-th {
-  background-color: #92d7cd;
-}
-
-table,
-th,
-td,
-tr {
-  text-align: left;
-  vertical-align: top;
-  padding: 0.5em;
-  border: 1px solid #dfdce3;
-  border-collapse: collapse;
-}
-
-tr:hover {
-  background-color: #f2f1f3;
-}
